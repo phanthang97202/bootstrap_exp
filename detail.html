@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
+
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"> -->
+
+
+
+    <!-- <script src="https://kit.fontawesome.com/3426ec3618.js" crossorigin="anonymous"></script> -->
+    <!-- <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.3.0-web/css/all.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"> -->
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="./assets/css/detail.css">
+    <script src="https://kit.fontawesome.com/3426ec3618.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <nav class="navigation active__menu container">
+        <button id="openMenu" class="navigation__toggle">
+            <i class="fa-regular fa-bars"></i>
+        </button>
+        <button id="closeMenu" type="button" class="d-none border-0 btn btn-light fa-solid fa-xmark"></button>
+        <div class="navigation__logo">
+            <a href="/">
+                <img src="https://uxflatsome.wpenginepowered.com/wp-content/themes/flatsome/assets/img/logo.png" alt="">
+
+            </a>
+            <div class="navigation__menu activeMenu">
+                <!-- <div class="coverModal"> -->
+                <div class="navigation__menu_search_second">
+                    <input class="navigation__menu_search_input" type="text" placeholder="Search...">
+                    <button class="navigation__menu_search_button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="navigation__menu__button_search">
+                    <i class="fas fa-search"></i>
+                    <div class="navigation__menu_search">
+                        <input class="navigation__menu_search_input" type="text" placeholder="Search...">
+                        <button class="navigation__menu_search_button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <ul>
+                    <li class="navigation__menu_demo">
+                        <a href="">Demo <i class="fa-light fa-angle-down"></i></a>
+                        <div class="navigation__menu_demo_items">
+                            <ul class="navigation__menu_demo_item">
+                                <li><a class="navigation__menu_demo_item_title" href="">Shop Demo</a></li>
+                                <li><a href="">Classic shop</a></li>
+                                <li><a href="">Simple slider</a></li>
+                                <li><a href="">Fullscreen fashion</a></li>
+                                <li><a href="">Shop Demo</a></li>
+                                <li><a href="">Shop Demo</a></li>
+                                <li><a href="">Shop Demo</a></li>
+                            </ul>
+                            <ul class="navigation__menu_demo_item">
+                                <li><a class="navigation__menu_demo_item_title" href="">Shop Demo</a></li>
+                                <li><a href="">Classic shop</a></li>
+                                <li><a href="">Simple slider</a></li>
+                                <li><a href="">Fullscreen fashion</a></li>
+                                <li><a href="">Shop Demo</a></li>
+                                <li><a href="">Shop Demo</a></li>
+                                <li><a href="">Shop Demo</a></li>
+                            </ul>
+                            <ul class="navigation__menu_demo_item">
+                                <li><a class="navigation__menu_demo_item_title" href="">Shop Demo</a></li>
+                                <li><a href="">Classic shop</a></li>
+                                <li><a href="">Simple slider</a></li>
+                                <li><a href="">Fullscreen fashion</a></li>
+                                <li><a href="">Shop Demo</a></li>
+                                <li><a href="">Shop Demo</a></li>
+                                <li><a href="">Shop Demo</a></li>
+                            </ul>
+
+                        </div>
+                    </li>
+                    <li><a href="">Featured <i class="fa-light fa-angle-down"></i> </a></li>
+                    <li><a href="">Shop <i class="fa-light fa-angle-down"></i></a></li>
+                    <li><a href="">Pages <i class="fa-light fa-angle-down"></i></a></li>
+                    <li><a href="">Blog <i class="fa-light fa-angle-down"></i></a></li>
+                    <li><a href="">Elements <i class="fa-light fa-angle-down"></i></a></li>
+                </ul>
+                <!-- </div> -->
+            </div>
+        </div>
+        <div class="navigation__cart">
+            <a href="">Login</a>
+            <a class="navigation__cart_icon" href="">
+                Cart /
+                <span>$0.00</span>
+            </a>
+            <button class="navigation__cart_icon">
+                <i class="fa-light fa-basket-shopping-simple"></i>
+                <!-- <i class="fa-thin fa-cart-flatbed-empty"></i> -->
+                <p>0</p>
+            </button>
+        </div>
+    </nav>
+
+    <div class="container p-0 mt-4 products__detail">
+        <div class="row m-auto">
+            <div class="col-lg-6 col-md-12">
+                <div>
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100"
+                                    src="https://flatsome3.uxthemes.com/wp-content/uploads/2013/06/T_7_front-768x768.jpg"
+                                    alt="First slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100"
+                                    src="https://flatsome3.uxthemes.com/wp-content/uploads/2013/06/T_7_back-768x768.jpg"
+                                    alt="Second slide">
+                            </div>
+
+
+                        </div>
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
+                                <img class="d-block w-100"
+                                    src="https://flatsome3.uxthemes.com/wp-content/uploads/2013/06/T_7_front-768x768.jpg"
+                                    alt="First slide">
+                            </li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1">
+                                <img class="d-block w-100"
+                                    src="https://flatsome3.uxthemes.com/wp-content/uploads/2013/06/T_7_back-768x768.jpg"
+                                    alt="Second slide">
+                            </li>
+
+                        </ol>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                            data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                            data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <div>
+                    <nav aria-label="breadcrumb breadcrumb__detail">
+                        <ol class="breadcrumb p-0">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Shop</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Clothing</li>
+                        </ol>
+                    </nav>
+                    <div class="modal_content ">
+                        <h1>Happy Ninja</h1>
+                        <div class="sidebar__filter_underline my-3"></div>
+                        <h6 class="my-0">$18,00</h6>
+                        <p class="modal__content_description mt-1">Pellentesque habitant morbi tristique senectus et
+                            netus et
+                            malesuada fames ac turpis egestas.
+                            Vestibulum tortor quam,
+                            feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
+                            semper. Aenean ultricies mi
+                            vitae est. Mauris placerat eleifend leo.</p>
+                        <div class="d-flex align-items-center border-bottom pb-4">
+                            <div class="modal__content_quantity">
+                                <button>-</button>
+                                <input type="number" id="quantity_640a980ba3655" class="input-text qty text" step="1"
+                                    min="1" max="" name="quantity" value="1" title="Qty" size="4" placeholder=""
+                                    inputmode="numeric">
+                                <button>+</button>
+                            </div>
+                            <button class="modal__content_addtocart">Add to cart</button>
+                        </div>
+                        <p class="modal__content_tag ">Categories: <strong>Clothing</strong></p>
+                        <ul class="footer__about_icon ">
+                            <li class="mx-1 mt-2">
+                                <a href=""><i class="text-secondary fa-brands fa-facebook-f"></i></a>
+                            </li>
+                            <li class="mx-1 mt-2">
+                                <a href=""><i class="text-secondary fa-brands fa-square-instagram"></i></a>
+                            </li>
+                            <li class="mx-1 mt-2">
+                                <a href=""><i class="text-secondary fa-brands fa-youtube"></i></a>
+                            </li>
+                            <li class="mx-1 mt-2">
+                                <a href=""><i class="text-secondary fa-brands fa-twitter"></i></a>
+                            </li>
+                            <li class="mx-1 mt-2">
+                                <a href=""><i class="text-secondary fa-brands fa-facebook-f"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-12 ">
+                <div class="products__prevnext">
+                    <div class="btn__handler_NextPrev mb-5">
+                        <button class="btn__handleNextPrev btn btn-primary fa-solid fa-angle-left"></button>
+                        <button class="btn__handleNextPrev btn btn-primary fa-solid fa-angle-right"></button>
+                    </div>
+                    <p class="float-right">You may also like...</p>
+                    <div class="sidebar__recent_container sidebar__price_hidden">
+                        <a href="#" class="sidebar__recent">
+                            <div class="sidebar__recent_img">
+                                <img src="https://uxflatsome.wpenginepowered.com/wp-content/uploads/2013/08/538228-0286_1-100x100.jpeg"
+                                    alt="">
+                            </div>
+                            <div class="sidebar__recent_info">
+                                <p class="h6">Happy Ninja</p>
+                                <strong>$29,00</strong>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div id="exTab1" class="container">
+                    <ul class="nav nav-pills">
+                        <li class="active">
+                            <a href="#1a" data-toggle="tab">Description</a>
+                        </li>
+                        <li><a href="#2a" data-toggle="tab">Reviews (0)</a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content clearfix">
+                        <div class="tab-pane active" id="1a">
+                            <h3>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+                                egestas. Vestibulum tortor quam,
+                                feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+                                egestas semper. Aenean ultricies mi
+                                vitae est. Mauris placerat eleifend leo.</h3>
+                        </div>
+                        <div class="reviews_tab tab-pane" id="2a">
+                            <h4>Reviews</h4>
+                            <p>There are no reviews yet.</p>
+                            <div>
+                                <h2>Be the first to review “Happy Ninja”</h2>
+                                <p>You must be <span>
+                                        <a href="">logged</a>
+                                    </span> in to post a review.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="container relative__detail">
+        <hr>
+        <h2>RELATED PRODUCTS</h2>
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class=" products justify-content-around container ">
+                        <div class="row gx-1">
+                            <a href="/detail.html" class="products__item px-0  col-lg-3 mb-2 col-md-6 col-sm-6 col-6 ">
+                                <div class="products__item_contain m-auto  align-self-center   ">
+                                    <img class="w-100 "
+                                        src="https://uxflatsome.wpenginepowered.com/wp-content/uploads/2013/06/T_5_front-494x593.jpg"
+                                        alt="">
+                                    <img class="products__item_contain_hidden w-100  "
+                                        src="https://uxflatsome.wpenginepowered.com/wp-content/uploads/2013/06/T_5_back-494x593.jpg"
+                                        alt="">
+
+                                    <button class="products__item_contain_sale  rounded-circle p-auto  ">
+                                        Sale!
+                                    </button>
+                                    <button
+                                        class="products__item_contain_favourite rounded-circle fa-light fa-heart"></button>
+                                    <button class="products__item_contain_view border-0">
+                                        <p class="m-0 text-light">Quick view</p>
+                                    </button>
+                                </div>
+                                <div class="products__item_price ">
+                                    <h6 class="font-weight-light mt-2 mb-0">CLOTHING</h6>
+                                    <p class="font-weight-normal text-dark m-0 ">Ship Your Idea</p>
+                                    <p class="text-dark font-weight-bolder m-0">$20.00</p>
+                                </div>
+                            </a>
+                            <a href="/detail.html" class="products__item px-0  col-lg-3 mb-2 col-md-6 col-sm-6 col-6 ">
+                                <div class="products__item_contain m-auto  align-self-center   ">
+                                    <img class="w-100 "
+                                        src="https://uxflatsome.wpenginepowered.com/wp-content/uploads/2013/06/T_7_front-494x593.jpg"
+                                        alt="">
+                                    <img class="products__item_contain_hidden w-100  "
+                                        src="https://uxflatsome.wpenginepowered.com/wp-content/uploads/2013/06/T_7_back-494x593.jpg"
+                                        alt="">
+                                    <div class="products__item_contain_exhausted">
+                                        <p class="m-0">OUT OF STOCK</p>
+                                    </div>
+
+                                    <button
+                                        class="products__item_contain_favourite rounded-circle fa-light fa-heart"></button>
+                                    <button class="products__item_contain_view border-0">
+                                        <p class="m-0 text-light">Quick view</p>
+                                    </button>
+                                </div>
+                                <div class="products__item_price ">
+                                    <h6 class="font-weight-light mt-2 mb-0">CLOTHING</h6>
+                                    <p class="font-weight-normal text-dark m-0 ">Ship Your Idea</p>
+                                    <p class="text-dark font-weight-bold m-0"> <del
+                                            class="font-weight-light">$20.00</del>$19.00</p>
+                                </div>
+                            </a>
+                            <a href="/detail.html" class="products__item px-0  col-lg-3 mb-2 col-md-6 col-sm-6 col-6 ">
+                                <div class="products__item_contain m-auto  align-self-center   ">
+                                    <img class="w-100 "
+                                        src="https://uxflatsome.wpenginepowered.com/wp-content/uploads/2013/06/T_7_front-494x593.jpg"
+                                        alt="">
+                                    <img class="products__item_contain_hidden w-100  "
+                                        src="https://uxflatsome.wpenginepowered.com/wp-content/uploads/2013/06/T_7_back-494x593.jpg"
+                                        alt="">
+
+                                    <button class="products__item_contain_sale  rounded-circle p-auto  ">
+                                        Sale!
+                                    </button>
+                                    <button
+                                        class="products__item_contain_favourite rounded-circle fa-light fa-heart"></button>
+                                    <button class="products__item_contain_view border-0">
+                                        <p class="m-0 text-light">Quick view</p>
+                                    </button>
+                                </div>
+                                <div class="products__item_price ">
+                                    <h6 class="font-weight-light mt-2 mb-0">CLOTHING</h6>
+                                    <p class="font-weight-normal text-dark m-0 ">Ship Your Idea</p>
+                                    <p class="text-dark font-weight-bolder m-0">$20.00</p>
+                                </div>
+                            </a>
+                            <a href="/detail.html" class="products__item px-0  col-lg-3 mb-2 col-md-6 col-sm-6 col-6 ">
+                                <div class="products__item_contain m-auto  align-self-center   ">
+                                    <img class="w-100 "
+                                        src="https://uxflatsome.wpenginepowered.com/wp-content/uploads/2013/06/T_7_front-494x593.jpg"
+                                        alt="">
+                                    <img class="products__item_contain_hidden w-100  "
+                                        src="https://uxflatsome.wpenginepowered.com/wp-content/uploads/2013/06/T_7_back-494x593.jpg"
+                                        alt="">
+                                    <div class="products__item_contain_exhausted">
+                                        <p class="m-0">OUT OF STOCK</p>
+                                    </div>
+
+                                    <button
+                                        class="products__item_contain_favourite rounded-circle fa-light fa-heart"></button>
+                                    <button class="products__item_contain_view border-0">
+                                        <p class="m-0 text-light">Quick view</p>
+                                    </button>
+                                </div>
+                                <div class="products__item_price ">
+                                    <h6 class="font-weight-light mt-2 mb-0">CLOTHING</h6>
+                                    <p class="font-weight-normal text-dark m-0 ">Ship Your Idea</p>
+                                    <p class="text-dark font-weight-bolder m-0">$20.00</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <div class=" products justify-content-around container ">
+                        <div class="row gx-1">
+                            <a href="/detail.html" class="products__item px-0  col-lg-3 mb-2 col-md-6 col-sm-6 col-6 ">
+                                <div class="products__item_contain m-auto  align-self-center   ">
+                                    <img class="w-100 "
+                                        src="https://uxflatsome.wpenginepowered.com/wp-content/uploads/2013/06/T_5_front-494x593.jpg"
+                                        alt="">
+                                    <img class="products__item_contain_hidden w-100  "
+                                        src="https://uxflatsome.wpenginepowered.com/wp-content/uploads/2013/06/T_5_back-494x593.jpg"
+                                        alt="">
+
+                                    <button class="products__item_contain_sale  rounded-circle p-auto  ">
+                                        Sale!
+                                    </button>
+                                    <button
+                                        class="products__item_contain_favourite rounded-circle fa-light fa-heart"></button>
+                                    <button class="products__item_contain_view border-0">
+                                        <p class="m-0 text-light">Quick view</p>
+                                    </button>
+                                </div>
+                                <div class="products__item_price ">
+                                    <h6 class="font-weight-light mt-2 mb-0">CLOTHING</h6>
+                                    <p class="font-weight-normal text-dark m-0 ">Ship Your Idea</p>
+                                    <p class="text-dark font-weight-bolder m-0">$20.00</p>
+                                </div>
+                            </a>
+                            <a href="/detail.html" class="products__item px-0  col-lg-3 mb-2 col-md-6 col-sm-6 col-6 ">
+                                <div class="products__item_contain m-auto  align-self-center   ">
+                                    <img class="w-100 "
+                                        src="https://uxflatsome.wpenginepowered.com/wp-content/uploads/2013/06/T_7_front-494x593.jpg"
+                                        alt="">
+                                    <img class="products__item_contain_hidden w-100  "
+                                        src="https://uxflatsome.wpenginepowered.com/wp-content/uploads/2013/06/T_7_back-494x593.jpg"
+                                        alt="">
+                                    <div class="products__item_contain_exhausted">
+                                        <p class="m-0">OUT OF STOCK</p>
+                                    </div>
+
+                                    <button
+                                        class="products__item_contain_favourite rounded-circle fa-light fa-heart"></button>
+                                    <button class="products__item_contain_view border-0">
+                                        <p class="m-0 text-light">Quick view</p>
+                                    </button>
+                                </div>
+                                <div class="products__item_price ">
+                                    <h6 class="font-weight-light mt-2 mb-0">CLOTHING</h6>
+                                    <p class="font-weight-normal text-dark m-0 ">Ship Your Idea</p>
+                                    <p class="text-dark font-weight-bold m-0"> <del
+                                            class="font-weight-light">$20.00</del>$19.00</p>
+                                </div>
+                            </a>
+                            <a href="/detail.html" class="products__item px-0  col-lg-3 mb-2 col-md-6 col-sm-6 col-6 ">
+                                <div class="products__item_contain m-auto  align-self-center   ">
+                                    <img class="w-100 "
+                                        src="https://uxflatsome.wpenginepowered.com/wp-content/uploads/2013/06/T_7_front-494x593.jpg"
+                                        alt="">
+                                    <img class="products__item_contain_hidden w-100  "
+                                        src="https://uxflatsome.wpenginepowered.com/wp-content/uploads/2013/06/T_7_back-494x593.jpg"
+                                        alt="">
+
+                                    <button class="products__item_contain_sale  rounded-circle p-auto  ">
+                                        Sale!
+                                    </button>
+                                    <button
+                                        class="products__item_contain_favourite rounded-circle fa-light fa-heart"></button>
+                                    <button class="products__item_contain_view border-0">
+                                        <p class="m-0 text-light">Quick view</p>
+                                    </button>
+                                </div>
+                                <div class="products__item_price ">
+                                    <h6 class="font-weight-light mt-2 mb-0">CLOTHING</h6>
+                                    <p class="font-weight-normal text-dark m-0 ">Ship Your Idea</p>
+                                    <p class="text-dark font-weight-bolder m-0">$20.00</p>
+                                </div>
+                            </a>
+                            <a href="/detail.html" class="products__item px-0  col-lg-3 mb-2 col-md-6 col-sm-6 col-6 ">
+                                <div class="products__item_contain m-auto  align-self-center   ">
+                                    <img class="w-100 "
+                                        src="https://uxflatsome.wpenginepowered.com/wp-content/uploads/2013/06/T_7_front-494x593.jpg"
+                                        alt="">
+                                    <img class="products__item_contain_hidden w-100  "
+                                        src="https://uxflatsome.wpenginepowered.com/wp-content/uploads/2013/06/T_7_back-494x593.jpg"
+                                        alt="">
+                                    <div class="products__item_contain_exhausted">
+                                        <p class="m-0">OUT OF STOCK</p>
+                                    </div>
+
+                                    <button
+                                        class="products__item_contain_favourite rounded-circle fa-light fa-heart"></button>
+                                    <button class="products__item_contain_view border-0">
+                                        <p class="m-0 text-light">Quick view</p>
+                                    </button>
+                                </div>
+                                <div class="products__item_price ">
+                                    <h6 class="font-weight-light mt-2 mb-0">CLOTHING</h6>
+                                    <p class="font-weight-normal text-dark m-0 ">Ship Your Idea</p>
+                                    <p class="text-dark font-weight-bolder m-0">$20.00</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <a class="nextprev__secondSlide carousel-control-prev" href="#carouselExampleControls" role="button"
+                data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="nextprev__secondSlide carousel-control-next" href="#carouselExampleControls" role="button"
+                data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <hr>
+
+    </div>
+
+    <div class="relative__products container ">
+        <div class="row">
+
+            <div class="relative__products_latest col-lg-3 col-md-6 col-sm-6 col-12">
+                <h6 class="mt-4 font-weight-bolder">LATEST</h6>
+                <div class="sidebar__filter_underline"></div>
+
+                <div class="sidebar__recent_container">
+                    <a href="#" class="sidebar__recent">
+                        <div class="sidebar__recent_img">
+                            <img src="https://uxflatsome.wpenginepowered.com/wp-content/uploads/2013/08/538228-0286_1-100x100.jpeg"
+                                alt="">
+                        </div>
+                        <div class="sidebar__recent_info">
+                            <p>Osaka Entry Tee Superdry 12</p>
+                            <strong>$29,00</strong>
+                        </div>
+                    </a>
+                    <a href="#" class="sidebar__recent ">
+                        <div class="sidebar__recent_img">
+                            <img src="https://uxflatsome.wpenginepowered.com/wp-content/uploads/2013/08/538228-0286_1-100x100.jpeg"
+                                alt="">
+                        </div>
+                        <div class="sidebar__recent_info">
+                            <p>Osakerdry 12 dsfs sdfsd sf</p>
+                            <strong>$29,00</strong>
+                        </div>
+                    </a>
+                    <a href="#" class="sidebar__recent ">
+                        <div class="sidebar__recent_img">
+                            <img src="https://uxflatsome.wpenginepowered.com/wp-content/uploads/2013/08/538228-0286_1-100x100.jpeg"
+                                alt="">
+                        </div>
+                        <div class="sidebar__recent_info">
+                            <p>Osakerdry 12 dsfs sdfsd sf</p>
+                            <strong>$29,00</strong>
+                        </div>
+                    </a>
+                    <a href="#" class="sidebar__recent ">
+                        <div class="sidebar__recent_img">
+                            <img src="https://uxflatsome.wpenginepowered.com/wp-content/uploads/2013/08/538228-0286_1-100x100.jpeg"
+                                alt="">
+                        </div>
+                        <div class="sidebar__recent_info">
+                            <p>Osakerdry 12 dsfs sdfsd sf</p>
+                            <strong>$29,00</strong>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="relative__products_selling col-lg-3 col-md-6 col-sm-6 col-12">
+                <h6 class="mt-4 font-weight-bolder">BEST SELLING</h6>
+                <div class="sidebar__filter_underline"></div>
+                <div class="sidebar__recent_container">
+                    <a href="#" class="sidebar__recent">
+                        <div class="sidebar__recent_img">
+                            <img src="https://uxflatsome.wpenginepowered.com/wp-content/uploads/2013/08/538228-0286_1-100x100.jpeg"
+                                alt="">
+                        </div>
+                        <div class="sidebar__recent_info">
+                            <p>Osaka Entry Tee Superdry 12</p>
+                            <strong>$29,00</strong>
+                        </div>
+                    </a>
+                    <a href="#" class="sidebar__recent ">
+                        <div class="sidebar__recent_img">
+                            <img src="https://uxflatsome.wpenginepowered.com/wp-content/uploads/2013/08/538228-0286_1-100x100.jpeg"
+                                alt="">
+                        </div>
+                        <div class="sidebar__recent_info">
+                            <p>Osakerdry 12 dsfs sdfsd sf</p>
+                            <strong>$29,00</strong>
+                        </div>
+                    </a>
+                    <a href="#" class="sidebar__recent">
+                        <div class="sidebar__recent_img">
+                            <img src="https://uxflatsome.wpenginepowered.com/wp-content/uploads/2013/08/538228-0286_1-100x100.jpeg"
+                                alt="">
+                        </div>
+                        <div class="sidebar__recent_info">
+                            <p>Osaka Entry Tee Superdry 12</p>
+                            <strong>$29,00</strong>
+                        </div>
+                    </a>
+                    <a href="#" class="sidebar__recent ">
+                        <div class="sidebar__recent_img">
+                            <img src="https://uxflatsome.wpenginepowered.com/wp-content/uploads/2013/08/538228-0286_1-100x100.jpeg"
+                                alt="">
+                        </div>
+                        <div class="sidebar__recent_info">
+                            <p>Osakerdry 12 dsfs sdfsd sf</p>
+                            <strong>$29,00</strong>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="relative__products_featured col-lg-3 col-md-6 col-sm-6 col-12">
+                <h6 class="mt-4 font-weight-bolder">FEATURED</h6>
+                <div class="sidebar__filter_underline"></div>
+                <div class="sidebar__recent_container">
+                    <a href="#" class="sidebar__recent">
+                        <div class="sidebar__recent_img">
+                            <img src="https://uxflatsome.wpenginepowered.com/wp-content/uploads/2013/08/538228-0286_1-100x100.jpeg"
+                                alt="">
+                        </div>
+                        <div class="sidebar__recent_info">
+                            <p>Osaka Entry Tee Superdry 12</p>
+                            <strong>$29,00</strong>
+                        </div>
+                    </a>
+                    <a href="#" class="sidebar__recent ">
+                        <div class="sidebar__recent_img">
+                            <img src="https://uxflatsome.wpenginepowered.com/wp-content/uploads/2013/08/538228-0286_1-100x100.jpeg"
+                                alt="">
+                        </div>
+                        <div class="sidebar__recent_info">
+                            <p>Osakerdry 12 dsfs sdfsd sf</p>
+                            <strong>$29,00</strong>
+                        </div>
+                    </a>
+                    <a href="#" class="sidebar__recent">
+                        <div class="sidebar__recent_img">
+                            <img src="https://uxflatsome.wpenginepowered.com/wp-content/uploads/2013/08/538228-0286_1-100x100.jpeg"
+                                alt="">
+                        </div>
+                        <div class="sidebar__recent_info">
+                            <p>Osaka Entry Tee Superdry 12</p>
+                            <strong>$29,00</strong>
+                        </div>
+                    </a>
+                    <a href="#" class="sidebar__recent ">
+                        <div class="sidebar__recent_img">
+                            <img src="https://uxflatsome.wpenginepowered.com/wp-content/uploads/2013/08/538228-0286_1-100x100.jpeg"
+                                alt="">
+                        </div>
+                        <div class="sidebar__recent_info">
+                            <p>Osakerdry 12 dsfs sdfsd sf</p>
+                            <strong>$29,00</strong>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="relative__products_toprated col-lg-3 col-md-6 col-sm-6 col-12">
+                <h6 class="mt-4 font-weight-bolder">TOP RATED PRODUCTS</h6>
+                <div class="sidebar__filter_underline"></div>
+                <div class="sidebar__recent_container">
+                    <a href="#" class="sidebar__recent">
+                        <div class="sidebar__recent_img">
+                            <img src="https://uxflatsome.wpenginepowered.com/wp-content/uploads/2013/08/538228-0286_1-100x100.jpeg"
+                                alt="">
+                        </div>
+                        <div class="sidebar__recent_info">
+                            <p>Osaka Entry Tee Superdry 12</p>
+                            <strong>$29,00</strong>
+                        </div>
+                    </a>
+                    <a href="#" class="sidebar__recent ">
+                        <div class="sidebar__recent_img">
+                            <img src="https://uxflatsome.wpenginepowered.com/wp-content/uploads/2013/08/538228-0286_1-100x100.jpeg"
+                                alt="">
+                        </div>
+                        <div class="sidebar__recent_info">
+                            <p>Osakerdry 12 dsfs sdfsd sf</p>
+                            <strong> <del>$29,00</del> $29,00</strong>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="footer container">
+            <div class="row">
+
+                <div class="footer__about col-lg-3 col-md-6 col-sm-6 col-12">
+                    <h6>ABOUT US</h6>
+                    <div class="sidebar__filter_underline"></div>
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                        tincidunt ut
+                        laoreet dolore
+                        magna aliquam erat volutpat.
+
+                    </p>
+                    <ul class="footer__about_icon">
+                        <li>
+                            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa-brands fa-youtube"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__news col-lg-3 col-md-6 col-sm-6 col-12">
+                    <h6>LATEST NEWS</h6>
+                    <div class="sidebar__filter_underline"></div>
+
+                    <ul>
+                        <li>
+                            <div>
+                                <p>19</p>
+                                <p>Nov</p>
+                            </div>
+                            <a href="">Welcome to Flatsome</a>
+                        </li>
+                        <li>
+                            <div>
+                                <p>19</p>
+                                <p>Nov</p>
+                            </div>
+                            <a href="">Welcome to Flatsome</a>
+                        </li>
+                        <li>
+                            <div>
+                                <p>19</p>
+                                <p>Nov</p>
+                            </div>
+                            <a href="">Welcome to Flatsome</a>
+                        </li>
+                        <li>
+                            <div>
+                                <p>19</p>
+                                <p>Nov</p>
+                            </div>
+                            <a href="">Welcome to Flatsome</a>
+                        </li>
+                        <li>
+                            <div>
+                                <p>19</p>
+                                <p>Nov</p>
+                            </div>
+                            <a href="">Welcome to Flatsome</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__tags col-lg-3 col-md-6 col-sm-6 col-12">
+                    <h6>TAGS</h6>
+                    <div class="sidebar__filter_underline"></div>
+
+                    <ul>
+                        <li>
+                            <a href="">bag</a>
+                        </li>
+                        <li>
+                            <a href="">classic</a>
+                        </li>
+                        <li>
+                            <a href="">fit</a>
+                        </li>
+                        <li>
+                            <a href="">Converse</a>
+                        </li>
+                        <li>
+                            <a href="">vans</a>
+                        </li>
+                        <li>
+                            <a href="">bag</a>
+                        </li>
+                        <li>
+                            <a href="">classic</a>
+                        </li>
+                        <li>
+                            <a href="">fit</a>
+                        </li>
+                        <li>
+                            <a href="">Converse Taylor</a>
+                        </li>
+                        <li>
+                            <a href="">vans</a>
+                        </li>
+                        <li>
+                            <a href="">bag</a>
+                        </li>
+                        <li>
+                            <a href="">classic bag</a>
+                        </li>
+                        <li>
+                            <a href="">fit</a>
+                        </li>
+                        <li>
+                            <a href="">Converse</a>
+                        </li>
+                        <li>
+                            <a href="">vans</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__signup col-lg-3 col-md-6 col-sm-6 col-12">
+                    <h6>SIGNUP FOR NEWSLETTER</h6>
+                    <div class="sidebar__filter_underline"></div>
+
+                    <p>
+                        Signup to get news about Flatsome & WooCommerce. We don't spam!
+                    </p>
+                    <input class="footer__signup_inputemail" type="text" placeholder="Your Email (requried)">
+                    <button class="footer__signup_btnemail">SIGN UP</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="author__container">
+        <div class="author container  align-items-center">
+            <!-- <div class="row"> -->
+            <div class="">
+                <ul class="mb-1 pb-1">
+                    <li class=""><a class="" href="">
+                            ABOUT
+                        </a></li>
+                    <li class=""><a class="" href="">
+                            OUR STORES
+                        </a></li>
+                    <li class=""><a class="" href="">
+                            BLOG
+                        </a></li>
+                    <li class=""><a class="" href="">
+                            CONTACT
+                        </a></li>
+                    <li class=""><a class="" href="">
+                            FAQ
+                        </a></li>
+                </ul>
+                <p>Copyright 2023 © <span>Flatsome Theme</span></p>
+            </div>
+            <ul class=" visa border-0">
+                <li><a class="btn btn-secondary border-0 h2" href=""><i class="fa-brands fa-cc-visa"></i></a></li>
+                <li><a class="btn btn-secondary border-0 h2" href=""><i class="fa-brands fa-cc-visa"></i></a></li>
+                <li><a class="btn btn-secondary border-0 h2" href=""><i class="fa-brands fa-cc-visa"></i></a></li>
+                <li><a class="btn btn-secondary border-0 h2" href=""><i class="fa-brands fa-cc-visa"></i></a></li>
+                <li><a class="btn btn-secondary border-0 h2" href=""><i class="fa-brands fa-cc-visa"></i></a></li>
+            </ul>
+            <!-- </div> -->
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+    <script src="./assets/javascript/main.js"></script>
+</body>
+
+</html>
